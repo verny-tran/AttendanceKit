@@ -91,4 +91,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 ## TensorFlow specific
-*.pb
+# *.pb
