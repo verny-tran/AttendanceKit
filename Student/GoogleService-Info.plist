@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>427521559009-h5k8o6rhtdh51iccqkgupacnp6fen1qm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.427521559009-h5k8o6rhtdh51iccqkgupacnp6fen1qm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB4r9BmMVp7a3tu6TpP_au070UH3HHZ-sM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>427521559009</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hamsick.FaceNet</string>
+	<key>PROJECT_ID</key>
+	<string>facenet-e782e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facenet-e782e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:427521559009:ios:5df7171376401fbaffeaa0</string>
+	<key>DATABASE_URL</key>
+	<string>https://facenet-e782e-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
