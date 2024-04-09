@@ -1,0 +1,12 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "--",
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.createml.version" : "13.0.0",
+    "com.apple.createml.app.tag" : "95.3",
+    "com.apple.coreml.model.preview.type" : "imageClassifier",
+    "com.apple.createml.app.version" : "4.0 Beta"
+  },
+  "MLModelAuthorKey" : "Trần T. Dũng ",
+  "MLModelLicenseKey" : "--"
+}

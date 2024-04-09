@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation files('/Users/vernius/Downloads/PCReaderJava_V2/Samplecode/RFIDReaderAPI.jar')
+    implementation files('/Users/vernius/Downloads/PCReaderJava_V2/Samplecode/slf4j-nop-1.6.4.jar')
+    implementation 'com.google.firebase:firebase-admin:9.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
