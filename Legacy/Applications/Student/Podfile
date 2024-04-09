@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'Student' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Student
+  pod 'TensorFlow-experimental'
+  pod 'FaceCropper'
+  pod 'Alamofire'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'IQKeyboardManagerSwift'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'RealmSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
+  pod 'ProgressHUD'
+  pod 'SDWebImage'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  target 'StudentTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  target 'StudentUITests' do
+    # Pods for testing
+  end
+  
+end
