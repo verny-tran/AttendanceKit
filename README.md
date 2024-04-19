@@ -1,5 +1,6 @@
 # AttendanceKit
 This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
+<hr/>
 
 ## Summary
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
@@ -9,6 +10,29 @@ Traditional attendance monitoring has disadvantaged wasting time and resources. 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Face%20recognition%20flow.png">
 
 And also in the paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2), we will examine the differences in the implementation approaches of a face recognition model on actual mobile devices (iOS and Android), as well as its performance. Specifically, we will look at the discrepancies between these two categories. In particular, we will investigate the ways in which these distinctions influence the precision of face recognition predictions as well as the amount of work that is required of devices in order for them to use a machine learning model, examine the advantages and disadvantages of the model encoding approach that is shared by the **TensorFlow** and **Core ML** frameworks, as well as how it helps to the overall success of the **AttendanceKit** system.
+
+__Contribution of this work__
+- A set of macOS and iOS role-based usable and deployable applications, which is very new because few researchers such as firebase realtime database, mobile app or institutions can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity, because iOS is the second major mobile operating system, this means a great deal, and the Android version will be much easier to develop. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
+- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage Apple’s native **ARKit** framework to identify and match a 3D grid mask on the student’s face, as well as a Convolution Neural Network (CNN) **TensorFlow's** **FaceNet** implementation model, converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
+- By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
+
+## Compatibility
+The code is tested using Tensorflow r1.7 under Ubuntu 14.04 with Python 2.7 and Python 3.5. The test cases can be found [here](https://github.com/davidsandberg/facenet/tree/master/test) and the results can be found [here](http://travis-ci.org/davidsandberg/facenet).
+
+## Dependencies
+This code is written in Swift. Dependencies include
+* python >= 3.10
+* pytorch = 2.1.2
+* torchvision = 0.16.2
+* tqdm
+* korina = 0.7.1
+* transformers = 4.36.2
+
+```bash
+conda env create -f environment.yml
+conda activate dd
+```
+<hr/>
 
 ## Table of contents
 1. [Introduction](#introduction)
