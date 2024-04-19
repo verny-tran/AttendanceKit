@@ -1,4 +1,5 @@
 # AttendanceKit
+This is the official repository and implementation of the papers ["**AttendanceKit: a set of role-based mobile applications for automatic attendance checking with UHF RFID using realtime firebase and face recognition**", in FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5_29) and ["**To Wrap, or Not to Wrap: Examining the Distinctions Between Model Implementations of Face Recognition on Mobile Devices in an Automatic Attendance System**", in SN Computer Science volume 4, 729 (2023).](https://doi.org/10.1007/s42979-023-02185-2)
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -47,7 +48,7 @@ Before starting the components, environment variables need to be initialized. In
 NOTE: If you use any of the models, please do not forget to give proper credit to those providing the training dataset as well.
 
 ## Reference <a name="reference"></a>
-To cite our paper, please use these BibTex
+To cite my papers, please use these BibTex:
 ```bibtex
 @inproceedings{tran2022attendancekit,
   title={AttendanceKit: a set of role-based mobile applications for automatic attendance checking with UHF RFID using realtime firebase and face recognition},
