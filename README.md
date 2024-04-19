@@ -24,8 +24,8 @@ This project is written in **Swift**, **Java** and **Python**. Dependencies incl
 __CocoaPods__
 ```ruby
 platform :ios, '15.0'
-
 use_frameworks!
+
 workspace 'AttendanceKit'
 
 def pods
@@ -64,7 +64,7 @@ end
 
 To create the `AttendanceKit.xcworkspace`, run the following commands in **Terminal**. Replace `<project_folder>` with your cloned project root folder:
 ```bash
-cd <project_folder>
+cd /Users/<project_folder>
 pod install
 ```
 
