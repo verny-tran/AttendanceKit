@@ -36,14 +36,15 @@ __Contribution of this work__
 ## News
 | Date       | Update |
 |------------|--------|
-| 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) has been approved by the committee from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
-| 25.09.2023 | The paper ["**To wrap, or not to wrap: Examining the distinctions between model implementations of face recognition on mobile devices in an automatic attendance system**"](https://doi.org/10.1007/s42979-023-02185-2) has been published. |
-| 13.07.2023 | The paper ["**To wrap, or not to wrap: Examining the distinctions between model implementations of face recognition on mobile devices in an automatic attendance system**"](https://doi.org/10.1007/s42979-023-02185-2) has been accepted. |
-| 24.04.2023 | The paper ["**To wrap, or not to wrap: Examining the distinctions between model implementations of face recognition on mobile devices in an automatic attendance system**"](https://doi.org/10.1007/s42979-023-02185-2) has been submitted. |
-| 03.01.2023 | The paper ["**AttendanceKit: A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID using Real-time Firebase and Face Recognition **"](https://doi.org/10.1007/978-981-19-8069-5_29) has been selected for publication in a special issue of [SNCS](https://link.springer.com/journal/42979) journal. |
-| 20.11.2022 | The paper ["**AttendanceKit: A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID using Real-time Firebase and Face Recognition **"](https://doi.org/10.1007/978-981-19-8069-5_29) has been published. |
-| 04.10.2022 | The paper ["**AttendanceKit: A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID using Real-time Firebase and Face Recognition **"](https://doi.org/10.1007/978-981-19-8069-5_29) has been accepted. |
-| 01.08.2022 | The paper ["**AttendanceKit: A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID using Real-time Firebase and Face Recognition **"](https://doi.org/10.1007/978-981-19-8069-5_29) has been submitted. |
+| 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) (level C) has been approved by the committee from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
+| 25.09.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been published. |
+| 30.07.2023 | The project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) (level B) has been submitted to request a grant from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
+| 13.07.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been accepted. |
+| 24.04.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been submitted. |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been selected for publication in a special issue of [SNCS](https://link.springer.com/journal/42979) journal. |
+| 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been published. |
+| 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been accepted. |
+| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been submitted. |
 
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
