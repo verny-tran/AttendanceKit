@@ -10,13 +10,13 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 
 ## Table of contents
 1. [Summary](#summary)
-1. [News](#news)
-2. [Compatibility](#compatibility)
-3. [Dependencies](#dependencies)
-4. [Pre-trained models](#models)
-4. [Training data](#training)
-4. [Performance](#performance)
-5. [Reference](#reference)
+2. [News](#news)
+3. [Compatibility](#compatibility)
+4. [Dependencies](#dependencies)
+5. [Pre-trained models](#models)
+6. [Training data](#training)
+7. [Performance](#performance)
+8. [Reference](#reference)
 
 ---
 
@@ -52,7 +52,7 @@ __Contribution of this work__
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
-__IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device.
+__IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with **IntelliJ**.
 
 ## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
