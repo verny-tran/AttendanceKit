@@ -37,12 +37,7 @@ __Contribution of this work__
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. The project must be built with **Xcode** on a **macOS** device.
 
 ## Dependencies <a name="dependencies"></a>
-This project is written in 
-![Swift](https://img.shields.io/badge/Swift-FA7343?logo=swift&logoColor=white)
-![Objective-C](https://img.shields.io/badge/Objective--C-3A95E3?logo=apple&logoColor=white)
-![Objective-C++](https://img.shields.io/badge/Objective--C++-5e5086?logo=apple&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) and
-![Python](https://img.shields.io/badge/Python-14354C?logo=python&logoColor=white). Dependencies include:
+This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
 
 ### CocoaPods
 ```ruby
