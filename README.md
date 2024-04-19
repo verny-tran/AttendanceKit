@@ -1,7 +1,16 @@
 # AttendanceKit
 This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
 
-## Summary
+## Table of contents
+1. [Summary](#summary)
+2. [Compatibility](#compatibility)
+3. [Dependencies](#dependencies)
+4. [Pre-trained models](#models)
+5. [Reference](#reference)
+
+<hr/>
+
+## Summary <a name="summary"></a>
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
 
 Traditional attendance monitoring has disadvantaged wasting time and resources. While an automatic attendance monitoring system enables students to check their attendance in offline classes. This paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29), we propose an **AttendanceKit** tool to check the automatic their attendance using real-time **Ultra-High Frequency (UHF) RFID** technology combined with **face recognition** in a suite of mobile applications for institution, lecturers, parents, and students. This can assist us overcome the disadvantages of manual inspection and get a very precise outcome. The backend system’s real-time updates will trigger automatic push notifications to the students’ mobile devices, prompting them to access the app and verify their attendance. They will also include the attendance monitoring features that allow the instructor to evaluate or determine the attendance status of each student. After receiving a request from a student, the application enables lecturers to manually monitor attendance in the event of unforeseen student concerns. In addition, our technique can automatically compile reports and analysis on each student’s learning status in each class and the class overall to provide the lecturers, parents, and the institution with the aggregate percentage of students who are committed to attending class. Our experiments show that some initial simulations of the system provide a more complete picture of how the new system operates and interacts, followed by an evaluation based on the learning outcomes of the class. Our system takes time and accuracy into account. In addition, our results present a complete performance study of the system with RFID and genuine mobile devices, as well as a novel machine learning platform that can be deployed on actual devices in reality for commercial. 
@@ -15,13 +24,13 @@ __Contribution of this work__
 - Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage Apple’s native **ARKit** framework to identify and match a 3D grid mask on the student’s face, as well as a Convolution Neural Network (CNN) **TensorFlow's** **FaceNet** implementation model, converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
-## Compatibility
+## Compatibility <a name="compatibility"></a>
 The code is tested using **Tensorflow** `r1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. The project must be built with **Xcode** on a **macOS** device.
 
-## Dependencies
+## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Java** and **Python**. Dependencies include:
 
-__CocoaPods__
+### CocoaPods
 ```ruby
 platform :ios, '15.0'
 use_frameworks!
@@ -72,19 +81,15 @@ If you don't have **CocoaPods** installed, install it by using this command:
 ```bash
 sudo gem install cocoapods
 ```
-<hr/>
-
-## Table of contents
-1. [Pre-trained models](#models)
-2. [Reference](#reference)
 
 ## Pre-trained models <a name="models"></a>
 | Model name      | LFW accuracy | Training dataset | Architecture |
 |-----------------|--------------|------------------|-------------|
-| [20180408-102900](https://drive.google.com/open?id=1R77HmFADxe87GmoLwzfgMu_HY0IhcyBz) | 0.9905        | CASIA-WebFace    | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
-| [20180402-114759](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-) | 0.9965        | VGGFace2      | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.mlmodel](https://drive.google.com/open?id=1R77HmFADxe87GmoLwzfgMu_HY0IhcyBz) | 0.9905        | CASIA-WebFace    | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.pb](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-) | 0.9965        | VGGFace2      | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.h5](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-) | 0.9965        | VGGFace2      | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
 
-NOTE: If you use any of the models, please do not forget to give proper credit to those providing the training dataset as well.
+__NOTE:__ If you use any of the models, please do not forget to give proper credit to those providing the training dataset as well.
 
 ## Reference <a name="reference"></a>
 To cite my papers, please use these BibTex:
