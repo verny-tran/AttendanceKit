@@ -36,7 +36,7 @@ __Contribution of this work__
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
-__IMPORTANT:__The project must be built with **Xcode** on a **macOS** device.
+__IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device.
 
 ## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
