@@ -139,7 +139,7 @@ The accuracy on LFW for the model [facenet.pb](https://github.com/verny-tran/Att
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
 
 ## Reference <a name="reference"></a>
-To cite my papers, please use these BibTex:
+To cite the papers, please use these BibTex:
 ```bibtex
 @inproceedings{tran2022attendancekit,
   title={AttendanceKit: a set of role-based mobile applications for automatic attendance checking with UHF RFID using realtime firebase and face recognition},
