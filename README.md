@@ -11,12 +11,13 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 ## Table of contents
 1. [Summary](#summary)
 2. [News](#news)
-3. [Compatibility](#compatibility)
-4. [Dependencies](#dependencies)
-5. [Pre-trained models](#models)
-6. [Training data](#training)
-7. [Performance](#performance)
-8. [Reference](#reference)
+3. [Inspiration](#inspiration)
+4. [Compatibility](#compatibility)
+5. [Dependencies](#dependencies)
+6. [Pre-trained models](#models)
+7. [Training data](#training)
+8. [Performance](#performance)
+9. [Reference](#reference)
 
 ---
 
@@ -49,8 +50,8 @@ __Contribution of this work__
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been accepted. |
 | 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been submitted. |
 
-## Inspiration
-The code is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
+## Inspiration <a name="inspiration"></a>
+The face recognition module of this project is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
