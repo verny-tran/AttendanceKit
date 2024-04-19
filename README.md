@@ -16,28 +16,61 @@ __Contribution of this work__
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## Compatibility
-The code is tested using **Tensorflow** `r1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`.
+The code is tested using **Tensorflow** `r1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. The project must be built with **Xcode** on a **macOS** device.
 
 ## Dependencies
 This project is written in **Swift**, **Java** and **Python**. Dependencies include:
 
 __CocoaPods__
 ```ruby
-pod 'TensorFlow-experimental'
-pod 'FaceCropper'
-pod 'Alamofire'
-pod 'RealmSwift'
-pod 'Firebase/Core'
-pod 'Firebase/Database'
-pod 'Firebase/Storage'
-pod 'SDWebImage'
-pod 'RxSwift'
-pod 'RxCocoa'
+platform :ios, '15.0'
+
+use_frameworks!
+workspace 'AttendanceKit'
+
+def pods
+  pod 'TensorFlow-experimental'
+  pod 'FaceCropper'
+  pod 'Alamofire'
+  pod 'RealmSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SDWebImage'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end
+
+target 'General' do
+  project 'General'
+  pods
+end
+
+target 'Student' do
+  project 'Student'
+  pods
+end
+
+target 'Institution' do
+  project 'Institution'
+  pods
+end
+
+target 'Lecturer' do
+  project 'Lecturer'
+  pods
+end
 ```
 
+To create the `AttendanceKit.xcworkspace`, run the following commands in **Terminal**. Replace `<project_folder>` with your cloned project root folder:
 ```bash
-conda env create -f environment.yml
-conda activate dd
+cd <project_folder>
+pod install
+```
+
+If you don't have **CocoaPods** installed, install it by using this command:
+```bash
+sudo gem install cocoapods
 ```
 <hr/>
 
