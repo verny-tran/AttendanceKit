@@ -33,6 +33,18 @@ __Contribution of this work__
 - Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
+## News
+| Date       | Update |
+|------------|--------|
+| 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) has been approved by the committee from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
+| 25.09.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been published. |
+| 13.07.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been accepted. |
+| 24.04.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been submitted. |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been selected for publication in a special issue of [SNCS](https://link.springer.com/journal/42979) journal. |
+| 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been published. |
+| 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been accepted. |
+| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been submitted. |
+
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
