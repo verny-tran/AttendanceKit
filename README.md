@@ -18,7 +18,7 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 ---
 
 ## Summary <a name="summary"></a>
-Traditional attendance monitoring has disadvantaged wasting time and resources. While an automatic attendance monitoring system enables students to check their attendance in offline classes. This paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29), we propose an **AttendanceKit** tool to check the automatic their attendance using real-time **Ultra-High Frequency (UHF) RFID** technology combined with **face recognition** in a suite of mobile applications for institution, lecturers, parents, and students. This can assist us overcome the disadvantages of manual inspection and get a very precise outcome. 
+Traditional attendance monitoring has disadvantaged wasting time and resources. While an automatic attendance monitoring system enables students to check their attendance in offline classes. This paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29), we propose an **AttendanceKit** set of applications to automatically check their attendance using real-time **Ultra-High Frequency (UHF) RFID** technology combined with **face recognition** in a suite of mobile applications for institution, lecturers, parents, and students. This can assist us overcome the disadvantages of manual inspection and get a very precise outcome. 
 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
 
@@ -29,8 +29,8 @@ The backend system’s real-time updates will trigger automatic push notificatio
 And also in the paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2), we will examine the differences in the implementation approaches of a face recognition model on actual mobile devices (iOS and Android), as well as its performance. Specifically, we will look at the discrepancies between these two categories. In particular, we will investigate the ways in which these distinctions influence the precision of face recognition predictions as well as the amount of work that is required of devices in order for them to use a machine learning model, examine the advantages and disadvantages of the model encoding approach that is shared by the **TensorFlow** and **Core ML** frameworks, as well as how it helps to the overall success of the **AttendanceKit** system.
 
 __Contribution of this work__
-- A set of macOS and iOS role-based usable and deployable applications, which is very new because few researchers such as firebase realtime database, mobile app or institutions can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity, because iOS is the second major mobile operating system, this means a great deal, and the Android version will be much easier to develop. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
-- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage Apple’s native **ARKit** framework to identify and match a 3D grid mask on the student’s face, as well as a Convolution Neural Network (CNN) **TensorFlow's** **FaceNet** implementation model, converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
+- A set of **macOS** and **iOS** role-based usable and deployable applications, which is very new because few researchers such as firebase realtime database, mobile app or institutions can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
+- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## Compatibility <a name="compatibility"></a>
@@ -89,6 +89,13 @@ pod install
 If you don't have **CocoaPods** installed, install it by using this command:
 ```bash
 sudo gem install cocoapods
+```
+
+### Gradle
+The macOS **RFID Dashboard** application uses **Gradle** as its project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
+
+```bash
+gradle --refresh-dependencies clean build
 ```
 
 ## Pre-trained models <a name="models"></a>
