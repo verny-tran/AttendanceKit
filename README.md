@@ -1,5 +1,5 @@
-# AttendanceKit
-This is the official repository and iOS implementation of the role-based mobile applications for attendance verification using facial recognition described in the papers ["**AttendanceKit: a set of role-based mobile applications for automatic attendance checking with UHF RFID using realtime firebase and face recognition**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: Examining the Distinctions Between Model Implementations of Face Recognition on Mobile Devices in an Automatic Attendance System**](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science volume 4, 729 (2023)](https://link.springer.com/journal/42979).
+# AttendanceKit [![Build Status][travis-image]][travis]
+This is the official repository and iOS implementation of the role-based mobile applications for attendance checking using facial recognition, UHF RFID and NFC described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science volume 4, 729 (2023)](https://link.springer.com/journal/42979).
 
 ## Table of contents
 1. [Introduction](#introduction)
