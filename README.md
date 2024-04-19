@@ -1,6 +1,5 @@
 # AttendanceKit
 This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
-<hr/>
 
 ## Summary
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
@@ -17,16 +16,24 @@ __Contribution of this work__
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## Compatibility
-The code is tested using Tensorflow r1.7 under Ubuntu 14.04 with Python 2.7 and Python 3.5. The test cases can be found [here](https://github.com/davidsandberg/facenet/tree/master/test) and the results can be found [here](http://travis-ci.org/davidsandberg/facenet).
+The code is tested using **Tensorflow** `r1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`.
 
 ## Dependencies
-This code is written in Swift. Dependencies include
-* python >= 3.10
-* pytorch = 2.1.2
-* torchvision = 0.16.2
-* tqdm
-* korina = 0.7.1
-* transformers = 4.36.2
+This project is written in **Swift**, **Java** and **Python**. Dependencies include:
+
+__CocoaPods__
+```ruby
+pod 'TensorFlow-experimental'
+pod 'FaceCropper'
+pod 'Alamofire'
+pod 'RealmSwift'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SDWebImage'
+pod 'RxSwift'
+pod 'RxCocoa'
+```
 
 ```bash
 conda env create -f environment.yml
