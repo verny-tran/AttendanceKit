@@ -34,7 +34,9 @@ __Contribution of this work__
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## Compatibility <a name="compatibility"></a>
-The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. The project must be built with **Xcode** on a **macOS** device.
+The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
+
+__IMPORTANT:__The project must be built with **Xcode** on a **macOS** device.
 
 ## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
