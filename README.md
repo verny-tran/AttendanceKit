@@ -72,9 +72,9 @@ The **face recognition module** of these applications is heavily inspired by the
 ![Java](https://img.shields.io/badge/Java-16.0-yellow)
 ![Python](https://img.shields.io/badge/Python-3.5-purple)
 
-The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0` under **iOS** `15.0`, **macOS** `12.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
+The code is tested using [TensorFlow](https://www.tensorflow.org) `1.7` and [Core ML](https://developer.apple.com/machine-learning/core-ml) `3.0` under **iOS** `15.0`, **macOS** `12.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
-__IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with **IntelliJ**.
+__IMPORTANT:__ The project must be built with [Xcode](https://developer.apple.com/xcode) on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with [IntelliJ](https://www.jetbrains.com/idea).
 
 ## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
@@ -136,7 +136,7 @@ $ pod install
 The macOS **RFID Dashboard** application uses [Gradle](https://gradle.org) as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
 
 ```bash
-gradle --refresh-dependencies clean build
+$ gradle --refresh-dependencies clean build
 ```
 
 ## Directory structure <a name="directory"></a>
