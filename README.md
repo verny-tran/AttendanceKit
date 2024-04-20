@@ -133,7 +133,7 @@ $ pod install
 ```
 
 ### Gradle
-The macOS **RFID Dashboard** application uses **Gradle** as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
+The macOS **RFID Dashboard** application uses [Gradle](https://gradle.org) as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
 
 ```bash
 gradle --refresh-dependencies clean build
