@@ -65,7 +65,14 @@ There are many items in the **AttendanceKit** set of applications, including: **
 The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
-The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
+![iOS](https://img.shields.io/badge/iOS-15.0-blue)
+![macOS](https://img.shields.io/badge/macOS-12.0-green)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-1.7-orange)
+![Core ML](https://img.shields.io/badge/Core_ML-3.0-turquoise)
+![Swift](https://img.shields.io/badge/Swift-5.1-orange)
+![Java](https://img.shields.io/badge/Java-16.0-yellow)
+![Python](https://img.shields.io/badge/Python-3.5-purple)
+The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0` under **iOS** `15.0`, **macOS** `12.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
 __IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with **IntelliJ**.
 
@@ -132,7 +139,7 @@ gradle --refresh-dependencies clean build
 ```
 
 ## Directory structure <a name="directory"></a>
-__IMPORTANT:__ Download the **FaceNet** TensorFlow model ~`87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the ML group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
+__IMPORTANT:__ Download the **FaceNet** TensorFlow model ~`87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the *ML* group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
 
 The directory should look like this:
 ```shell
