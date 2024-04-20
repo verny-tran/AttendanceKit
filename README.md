@@ -58,8 +58,7 @@ There are many applications in the set
 | RFID Dashboard |     Student    |   Institution  |    Lecturer    |
 |      :---:     |      :---:     |      :---:     |      :---:     |
 | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) |
-| git status     | git status     | git status     | git status     |
-| git diff       | git diff       | git diff       | git diff       |
+| For connecting to RFID to read and display tag IDs, act as an admin middleware desktop application to compose notifications for mobile devices. | Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. |
 
 ## Inspiration <a name="inspiration"></a>
 The face recognition module of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
