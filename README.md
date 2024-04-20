@@ -27,7 +27,11 @@ Traditional attendance monitoring has disadvantaged wasting time and resources. 
 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
 
-The backend system’s real-time updates will trigger **automatic push notifications** to the students’ mobile devices, prompting them to access the app and verify their attendance. They will also include the attendance monitoring features that allow the instructor to evaluate or determine the attendance status of each student. After receiving a request from a student, the application enables lecturers to *manually monitor attendance in the event of unforeseen student concerns*. In addition, our technique can automatically compile reports and analysis on each student’s learning status in each class and the class overall to provide the lecturers, parents, and the institution with the aggregate percentage of students who are committed to attending class. Our experiments show that some initial simulations of the system provide a more complete picture of how the new system operates and interacts, followed by an evaluation based on the learning outcomes of the class. Our system takes **time and accuracy** into account. In addition, our results present a complete performance study of the system with RFID, NFC and genuine mobile devices, as well as a novel machine learning platform that *can be deployed on actual devices* in reality for commercial. 
+The backend system’s real-time updates will trigger **automatic push notifications** to the students’ mobile devices, prompting them to access the app and verify their attendance. They will also include the attendance monitoring features that allow the instructor to evaluate or determine the attendance status of each student. After receiving a request from a student, the application enables lecturers to *manually monitor attendance in the event of unforeseen student concerns*. In addition, our technique can automatically compile reports and analysis on each student’s learning status in each class and the class overall to provide the lecturers, parents, and the institution with the aggregate percentage of students who are committed to attending class.
+
+<img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Admin%20module.png">
+
+Our experiments show that some initial simulations of the system provide a more complete picture of how the new system operates and interacts, followed by an evaluation based on the learning outcomes of the class. Our system takes **time and accuracy** into account. In addition, our results present a complete performance study of the system with RFID, NFC and genuine mobile devices, as well as a novel machine learning platform that *can be deployed on actual devices* in reality for commercial. 
 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Face%20recognition%20flow.png">
 
@@ -58,7 +62,7 @@ There are many items in the **AttendanceKit** set of applications, including: **
 |     Student    |   Institution  |    Lecturer    | RFID Dashboard |
 |      :---:     |      :---:     |      :---:     |      :---:     |
 | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) |
-| Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as admin to compose notifications for mobile devices. |
+| Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as admin application to compose notifications for mobile devices. |
 
 ## Inspiration <a name="inspiration"></a>
 The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
@@ -72,9 +76,9 @@ The **face recognition module** of these applications is heavily inspired by the
 ![Java](https://img.shields.io/badge/Java-16.0-yellow)
 ![Python](https://img.shields.io/badge/Python-3.5-purple)
 
-The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0` under **iOS** `15.0`, **macOS** `12.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
+The code is tested using [TensorFlow](https://www.tensorflow.org) `1.7` and [Core ML](https://developer.apple.com/machine-learning/core-ml) `3.0` under **iOS** `15.0`, **macOS** `12.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
 
-__IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with **IntelliJ**.
+__IMPORTANT:__ The project must be built with [Xcode](https://developer.apple.com/xcode) on a **macOS** device. While the **RFID Dashboard** desktop middleware app can be built with [IntelliJ](https://www.jetbrains.com/idea).
 
 ## Dependencies <a name="dependencies"></a>
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
@@ -133,10 +137,10 @@ $ pod install
 ```
 
 ### Gradle
-The macOS **RFID Dashboard** application uses **Gradle** as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
+The macOS **RFID Dashboard** application uses [Gradle](https://gradle.org) as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
 
 ```bash
-gradle --refresh-dependencies clean build
+$ gradle --refresh-dependencies clean build
 ```
 
 ## Directory structure <a name="directory"></a>
