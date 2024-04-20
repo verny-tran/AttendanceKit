@@ -11,13 +11,14 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 ## Table of contents
 1. [Summary](#summary)
 2. [News](#news)
-3. [Inspiration](#inspiration)
-4. [Compatibility](#compatibility)
-5. [Dependencies](#dependencies)
-6. [Pre-trained models](#models)
-7. [Training data](#training)
-8. [Performance](#performance)
-9. [Reference](#reference)
+3. [Applications](#applications)
+4. [Inspiration](#inspiration)
+5. [Compatibility](#compatibility)
+6. [Dependencies](#dependencies)
+7. [Pre-trained models](#models)
+8. [Training data](#training)
+9. [Performance](#performance)
+10. [Reference](#reference)
 
 ---
 
@@ -34,7 +35,7 @@ And also in the paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.10
 
 __Contribution of this work__
 - A set of **macOS** and **iOS** role-based usable and deployable applications, which is very new because few researchers can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
-- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
+- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning. RFID and NFC tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## News <a name="news"></a>
@@ -50,6 +51,9 @@ __Contribution of this work__
 | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
 | 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted**. |
+
+## Applications <a name="applications"></a>
+There are many applications in the set
 
 ## Inspiration <a name="inspiration"></a>
 The face recognition module of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
