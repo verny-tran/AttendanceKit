@@ -57,7 +57,7 @@ There are many applications in the set
 
 | RFID Dashboard |     Student    |   Institution  |    Lecturer    |
 |      :---:     |      :---:     |      :---:     |      :---:     |
-| ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) |
+| ![](https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/Dashboard%20Icon.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/Lecturer.png) |
 | git status     | git status     | git status     | git status     |
 | git diff       | git diff       | git diff       | git diff       |
 
