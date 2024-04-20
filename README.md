@@ -55,7 +55,7 @@ __Contribution of this work__
 ## Applications <a name="applications"></a>
 There are many applications in the set
 
-| <p align="center" width="100%"><img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/AttendanceKit.png"></p> | <p align="center" width="100%"><img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/AttendanceKit.png"></p> | <p align="center" width="100%"><img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/AttendanceKit.png"></p> | <p align="center" width="100%"><img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/AttendanceKit.png"></p> |
+| ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) |
 | RFID Dashboard |     Student    |   Institution  |    Lecturer    |
 |      :---:     |      :---:     |      :---:     |      :---:     |
 | git status     | git status     | git status     | git status     |
