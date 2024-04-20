@@ -6,18 +6,19 @@
 
 This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
 
-This research was funded by Vietnam National University, Ho Chi Minh City (VNU-HCM) under grant number C2022-28-10 (level C). Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and should not be attributed to their employers or funding sources.
+This research was funded by Vietnam National University, Ho Chi Minh City (VNU-HCM) under grant number **C2022-28-10 (level C)** and is on-going with another grant in **level B**. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and should not be attributed to their employers or funding sources.
 
 ## Table of contents
 1. [Summary](#summary)
 2. [News](#news)
-3. [Inspiration](#inspiration)
-4. [Compatibility](#compatibility)
-5. [Dependencies](#dependencies)
-6. [Pre-trained models](#models)
-7. [Training data](#training)
-8. [Performance](#performance)
-9. [Reference](#reference)
+3. [Applications](#applications)
+4. [Inspiration](#inspiration)
+5. [Compatibility](#compatibility)
+6. [Dependencies](#dependencies)
+7. [Pre-trained models](#models)
+8. [Training data](#training)
+9. [Performance](#performance)
+10. [Reference](#reference)
 
 ---
 
@@ -33,22 +34,32 @@ The backend system’s real-time updates will trigger automatic push notificatio
 And also in the paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2), we will examine the differences in the implementation approaches of a face recognition model on actual mobile devices (iOS and Android), as well as its performance. Specifically, we will look at the discrepancies between these two categories. In particular, we will investigate the ways in which these distinctions influence the precision of face recognition predictions as well as the amount of work that is required of devices in order for them to use a machine learning model, examine the advantages and disadvantages of the model encoding approach that is shared by the **TensorFlow** and **Core ML** frameworks, as well as how it helps to the overall success of the **AttendanceKit** system.
 
 __Contribution of this work__
-- A set of **macOS** and **iOS** role-based usable and deployable applications, which is very new because few researchers such as firebase realtime database, mobile app or institutions can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
-- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of automatic RFID in improving the quality of learning. RFID tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
+- A set of **macOS** and **iOS** role-based usable and deployable applications, which is very new because few researchers can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
+- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning. RFID and NFC tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
 - By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
 
 ## News <a name="news"></a>
 | Date       | Update |
 |------------|--------|
-| 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) (level C) has been approved by the committee from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
-| 25.09.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been published. |
-| 30.07.2023 | The project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) (level B) has been submitted to request a grant from Vietnam National University, Ho Chi Minh City (VNU-HCM). |
-| 13.07.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been accepted. |
-| 24.04.2023 | The paper ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been submitted. |
-| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been selected for publication in a special issue of [SNCS](https://link.springer.com/journal/42979) journal. |
-| 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been published. |
-| 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been accepted. |
-| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been submitted. |
+| 20.03.2024 | My thesis dissertation for the **BSc. degree in Computer Science** with the topic ["Autonomous attendance mobile applications based on Face Recognition and NFC"](https://it.hcmiu.edu.vn) has been successfully defended at the **International University - Vietnam National University, Ho Chi Minh City (HCMIU)**. |
+| 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)** has been **approved** by the committee from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
+| 25.09.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **published**. |
+| 30.07.2023 | A new project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) **(level B)** has been **submitted** to request a grant from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
+| 13.07.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **accepted**. |
+| 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted**. |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication in a special issue** of [SNCS](https://link.springer.com/journal/42979) journal. |
+| 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
+| 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
+| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted**. |
+
+## Applications <a name="applications"></a>
+There are many applications in the set
+
+| RFID Dashboard |     Student    |   Institution  |    Lecturer    |
+|      :---:     |      :---:     |      :---:     |      :---:     |
+| ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) |
+| git status     | git status     | git status     | git status     |
+| git diff       | git diff       | git diff       | git diff       |
 
 ## Inspiration <a name="inspiration"></a>
 The face recognition module of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
