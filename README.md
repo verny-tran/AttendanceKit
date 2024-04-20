@@ -15,10 +15,11 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 4. [Inspiration](#inspiration)
 5. [Compatibility](#compatibility)
 6. [Dependencies](#dependencies)
-7. [Pre-trained models](#models)
-8. [Training data](#training)
-9. [Performance](#performance)
-10. [Reference](#reference)
+7. [Directory structure](#directory)
+8. [Pre-trained models](#models)
+9. [Training data](#training)
+10. [Performance](#performance)
+11. [Reference](#reference)
 
 ---
 
@@ -47,7 +48,7 @@ __Contribution of this work__
 | 30.07.2023 | A new project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) **(level B)** has been **submitted** to request a grant from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
 | 13.07.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **accepted**. |
 | 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted**. |
-| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication in a special issue** of [SNCS](https://link.springer.com/journal/42979) journal. |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a **special issue** of [SNCS](https://link.springer.com/journal/42979) journal. |
 | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
 | 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted**. |
@@ -61,7 +62,7 @@ There are many items in the **AttendanceKit** set of applications, including: **
 | Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as an admin app to compose notifications for mobile devices. |
 
 ## Inspiration <a name="inspiration"></a>
-The face recognition module of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
+The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
 The code is tested using **TensorFlow** `1.7` and **Core ML** `3.0`  under **iOS** `15.0` with **Swift** `5.1`, **Java** `16.0` and **Python** `3.5`. 
@@ -130,6 +131,42 @@ The macOS **RFID Dashboard** application uses **Gradle** as its project build au
 gradle --refresh-dependencies clean build
 ```
 
+## Directory structure <a name="directory"></a>
+__IMPORTANT:__ Download the **FaceNet** TensorFlow model ~`87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the ML group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
+
+The directory should look like this:
+```shell
+┌── Institution/
+  ┌── ML/
+    ┌── facenet.pb
+    ├── tensorflow_utils.h
+    ├── ...
+    ├── tfWrap.h
+    └── tfWrap.mm
+  ├── ...
+  └── View/
+  
+├── Lecturer/
+  ┌── ML/
+    ┌── facenet.pb
+    ├── tensorflow_utils.h
+    ├── ...
+    ├── tfWrap.h
+    └── tfWrap.mm
+  ├── ...
+  └── View/
+
+└── Student/
+  ┌── ML/
+    ┌── facenet.pb
+    ├── tensorflow_utils.h
+    ├── ...
+    ├── tfWrap.h
+    └── tfWrap.mm
+  ├── ...
+  └── View/
+```
+
 ## Pre-trained models <a name="models"></a>
 | Model name      | LFW accuracy | Training dataset | Architecture |
 |-----------------|--------------|------------------|-------------|
@@ -152,7 +189,7 @@ __NOTE:__ The input images to the model need to be standardized using fixed imag
 To cite the papers, please use these BibTex:
 ```bibtex
 @inproceedings{tran2022attendancekit,
-  title={AttendanceKit: a set of role-based mobile applications for automatic attendance checking with UHF RFID using realtime firebase and face recognition},
+  title={A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID Using Realtime Firebase and Face Recognition},
   author={Tran, Trung-Dung and Huynh, Kha-Tu and Nguyen, Phu-Quang and Ly, Tu-Nga},
   booktitle={International Conference on Future Data and Security Engineering},
   pages={432--446},
