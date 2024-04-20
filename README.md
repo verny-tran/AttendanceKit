@@ -43,7 +43,7 @@ __Contribution of this work__
 |------------|--------|
 | 20.03.2024 | My thesis dissertation for the **BSc. degree in Computer Science** with the topic ["Autonomous attendance mobile applications based on Face Recognition and NFC"](https://it.hcmiu.edu.vn) has been successfully defended at the **International University - Vietnam National University, Ho Chi Minh City (HCMIU)**. |
 | 04.12.2023 | The project [**C2022-28-10:** "Face recognition enhancement utilizing on-device machine learning"](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)** has been **approved** by the committee from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
-| 25.09.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been published. |
+| 25.09.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **published**. |
 | 30.07.2023 | A new project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) **(level B)** has been **submitted** to request a grant from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
 | 13.07.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **accepted**. |
 | 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted**. |
@@ -54,6 +54,11 @@ __Contribution of this work__
 
 ## Applications <a name="applications"></a>
 There are many applications in the set
+
+| RFID Dashboard |     Student    |   Institution  |    Lecturer    |
+|      :---:     |      :---:     |      :---:     |      :---:     |
+| git status     | git status     | git status     | git status     |
+| git diff       | git diff       | git diff       | git diff       |
 
 ## Inspiration <a name="inspiration"></a>
 The face recognition module of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
