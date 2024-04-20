@@ -22,8 +22,6 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 11. [Reference](#reference)
 12. [License](#license)
 
----
-
 ## Summary <a name="summary"></a>
 Traditional attendance monitoring has disadvantaged wasting time and resources. While an automatic attendance monitoring system enables students to check their attendance in offline classes. This paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29), we propose an **AttendanceKit** set of applications to automatically check their attendance using real-time **Ultra-High Frequency (UHF) RFID** technology combined with **face recognition** in a suite of mobile applications for institution, lecturers, parents, and students. This can assist us overcome the disadvantages of manual inspection and get a very precise outcome. 
 
@@ -135,7 +133,7 @@ $ pod install
 ```
 
 ### Gradle
-The macOS **RFID Dashboard** application uses **Gradle** as its project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
+The macOS **RFID Dashboard** application uses **Gradle** as it's project build automation tool. Refresh the dependencies of the `dashboard.idea` project by running the following command:
 
 ```bash
 gradle --refresh-dependencies clean build
