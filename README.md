@@ -20,6 +20,7 @@ This research was funded by Vietnam National University, Ho Chi Minh City (VNU-H
 9. [Training data](#training)
 10. [Performance](#performance)
 11. [Reference](#reference)
+12. [License](#license)
 
 ---
 
@@ -81,6 +82,12 @@ __IMPORTANT:__ The project must be built with **Xcode** on a **macOS** device. W
 This project is written in **Swift**, **Objective-C**, **Objective-C++**, **Java** and **Python**. Dependencies include:
 
 ### CocoaPods
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. If you don't have **CocoaPods** installed, install it by using this command:
+```bash
+$ sudo gem install cocoapods
+```
+
+To integrate all of the necessary pods into the **Xcode** workspace using **CocoaPods**, specify it in your `Podfile`:
 ```ruby
 platform :ios, '15.0'
 use_frameworks!
@@ -123,13 +130,8 @@ end
 
 To create the `AttendanceKit.xcworkspace`, run the following commands in **Terminal**. Replace `<project_folder>` with your cloned project root folder:
 ```bash
-cd /Users/<project_folder>
-pod install
-```
-
-If you don't have **CocoaPods** installed, install it by using this command:
-```bash
-sudo gem install cocoapods
+$ cd /Users/<project_folder>
+$ pod install
 ```
 
 ### Gradle
@@ -218,3 +220,6 @@ To cite the papers, please use these BibTex:
   publisher={Springer}
 }
 ```
+
+## License <a name="license"></a>
+**AttendanceKit** is open-sourced under the **CC0-1.0** license. See `LICENSE` for more details.
