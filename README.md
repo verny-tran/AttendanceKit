@@ -55,9 +55,9 @@ __Contribution of this work__
 ## Applications <a name="applications"></a>
 There are many applications in the set
 
-| ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) |
 | RFID Dashboard |     Student    |   Institution  |    Lecturer    |
 |      :---:     |      :---:     |      :---:     |      :---:     |
+| ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) | ![](https://goo.gl/1R3T6h) |
 | git status     | git status     | git status     | git status     |
 | git diff       | git diff       | git diff       | git diff       |
 
