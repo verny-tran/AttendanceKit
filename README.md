@@ -31,6 +31,8 @@ The backend system’s real-time updates will trigger **automatic push notificat
 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Admin%20module.png">
 
+The diagram depicted above demonstrates the procedural flow of the custom admin module. The purpose of this module is to address the limitation of [Firebase Authentication](https://firebase.google.com/docs/auth), which initially **doesn't permit an end-user** *to create accounts* on behalf of **other end-users**. Thus, it is incorporated as a little [Node.js](https://nodejs.org) module to enable one end-user (Institution) to generate accounts for another end-user (Student).
+
 Our experiments show that some initial simulations of the system provide a more complete picture of how the new system operates and interacts, followed by an evaluation based on the learning outcomes of the class. Our system takes **time and accuracy** into account. In addition, our results present a complete performance study of the system with RFID, NFC and genuine mobile devices, as well as a novel machine learning platform that *can be deployed on actual devices* in reality for commercial. 
 
 <img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Face%20recognition%20flow.png">
@@ -38,9 +40,12 @@ Our experiments show that some initial simulations of the system provide a more 
 And also in the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2), we will examine the differences in the implementation approaches of a face recognition model on actual mobile devices (iOS and Android), as well as its performance. Specifically, we will look at the discrepancies between these two categories. In particular, we will investigate the ways in which these distinctions influence the precision of face recognition predictions as well as the amount of work that is required of devices in order for them to use a machine learning model, examine the advantages and disadvantages of the model encoding approach that is shared by the **TensorFlow** and **Core ML** frameworks, as well as how it helps to the overall success of the **AttendanceKit** system.
 
 __Contribution of this work__
-- A set of **macOS** and **iOS** role-based usable and deployable applications, which is very new because few researchers can develop or try to implement anything on Apple platforms previously due to the difficulty of hardware dependency and its exclusivity. The algorithm is then fed a series of **5-second-long videos** containing the faces of students. A collection of student faces is compared with the image captured by the camera on the mobile device, and attendance is recorded if the two IDs matched, stored ID via vectors in the database after trained and current ID via mobile app.
-- Utilizing the information system described, we continue to assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning. RFID and NFC tags and mobile device’s camera are combined to reach our current target of teaching or security-based facial. We leverage a Convolution Neural Network (CNN) **FaceNet** model, implemented in **TensorFlow's** and converted to **Core ML** `.mlmodel` format prior. The timing and precision of our system are then determined.
-- By comparing the analysis on the two mobile platforms, we can determine the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) and have a clear picture of which strategy to employ for similar systems that also include machine learning models on mobile applications.
+- A set of **macOS** and **iOS** role-based attendance checking usable and deployable applications for Apple platforms.
+- Assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning.
+- **Custom admin module** to modify the behavior of **Firebase Authentication**, allows an end-user to create accounts for other end-users.
+- Algorithms fed with a series of **5-second-long videos** containing the face samples of students and and how to optimize the recognition process in real-time on mobile devices's camera.
+- Leverage the CNN **FaceNet** model, implemented in **TensorFlow's** and how to convert to the native **Core ML** `.mlmodel` format prior. Examining the approaches of **Create ML**, **turicreate** and **coremltools**.
+- Determined timing and precision by comparing the analysis on the two mobile platforms, and the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) to have a clear picture of which strategy to employ for similar systems.
 
 ## News <a name="news"></a>
 | Date       | Update |
