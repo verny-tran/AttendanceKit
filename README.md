@@ -42,7 +42,7 @@ And also the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.100
 __Contribution of this work__
 - A set of **macOS** and **iOS** role-based attendance checking usable and deployable applications for Apple platforms.
 - Assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning.
-- **Custom admin module** to modify the behavior of **Firebase Authentication**, allows an end-user to create accounts for other end-users.
+- Custom **admin module** to modify the behavior of **Firebase Authentication**, allows an end-user to create accounts for other end-users.
 - Algorithms fed with a series of **5-second-long videos** containing the face samples of students and and how to optimize the recognition process in real-time on mobile devices's camera.
 - Leverage the CNN **FaceNet** model, implemented in **TensorFlow's** and how to convert to the native **Core ML** `.mlmodel` format prior. Examining the approaches of **Create ML**, **turicreate** and **coremltools**.
 - Determined timing and precision by comparing the analysis on the two mobile platforms, and the benefits and drawbacks of each model implementation method (**native framework**, **web API**, **model wrapping**, or **model converting**) to have a clear picture of which strategy to employ for similar systems.
