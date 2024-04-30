@@ -4,11 +4,13 @@
 </p>
 <h1 align="center"> AttendanceKit </h1>
 
-This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
+<p align="center"> This is the official repository and **iOS** implementation of the role-based mobile applications for attendance checking using **facial recognition**, **UHF RFID** and **NFC** described in the papers ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5) and ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) in [SN Computer Science • Volume 4, 729 (2023)](https://link.springer.com/journal/42979).
+</p>
 
-This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-HCM)](https://vnuhcm.edu.vn) under grant number [**C2022-28-10**](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)** and is on-going with another grant in **level B**. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and should not be attributed to their employers or funding sources.
+<p align="center"> This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-HCM)](https://vnuhcm.edu.vn) under grant number [**C2022-28-10**](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)** and is on-going with another grant in **level B**. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and should not be attributed to their employers or funding sources.
+</p>
 
-## Table of contents
+## Contents
 1. [Summary](#summary)
 2. [News](#news)
 3. [Applications](#applications)
