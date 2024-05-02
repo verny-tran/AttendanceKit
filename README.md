@@ -12,15 +12,14 @@ This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-
 1. [Summary](#summary)
 2. [News](#news)
 3. [Applications](#applications)
-4. [Inspiration](#inspiration)
-5. [Compatibility](#compatibility)
-6. [Dependencies](#dependencies)
-7. [Directory structure](#directory)
-8. [Pre-trained models](#models)
-9. [Training data](#training)
-10. [Performance](#performance)
-11. [Reference](#reference)
-12. [License](#license)
+4. [Compatibility](#compatibility)
+5. [Dependencies](#dependencies)
+6. [Directory structure](#directory)
+7. [Pre-trained models](#models)
+8. [Training data](#training)
+9. [Performance](#performance)
+10. [Reference](#reference)
+11. [License](#license)
 
 ## Summary <a name="summary"></a>
 The research project proposes an ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) system that uses real-time **Ultra-High Frequency (UHF) RFID** and **NFC** technology combined with **face recognition** to automatically check students' attendance in offline classes, packaged as a suite of mobile applications for *Institution*, *Lecturers* and *Students* to overcoming the disadvantages of manual inspection.
@@ -69,7 +68,7 @@ There are many items in the **AttendanceKit** set of applications, including: **
 | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) |
 | Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as admin application to compose notifications for mobile devices. |
 
-## Inspiration <a name="inspiration"></a>
+### Inspiration
 The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
