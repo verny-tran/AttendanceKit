@@ -56,7 +56,7 @@ __Contribution of this work:__
 | 30.07.2023 | A new project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) **(level B)** has been **submitted** to request a grant from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
 | 13.07.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **accepted**. |
 | 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted** to the journal [SNCS](https://link.springer.com/journal/42979). |
-| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a **special issue** of [SN Computer Science](https://link.springer.com/journal/42979) journal. |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a *special issue* of [SN Computer Science](https://link.springer.com/journal/42979) journal. |
 | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
 | 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted** to the conference [Future Data and Security Engineering](https://link.springer.com/book/10.1007/978-981-19-8069-5). |
