@@ -39,7 +39,7 @@ Our system also takes **time and accuracy** into account. In addition, the resul
 
 And also the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) explores the implementation approaches of face recognition models on mobile devices, focusing on their performance and precision. It explores the advantages and disadvantages of the [TensorFlow](https://www.tensorflow.org) and [Core ML](https://developer.apple.com/machine-learning/core-ml) model encoding approach, and its impact on the overall success of the **AttendanceKit** system.
 
-__Contribution of this work__
+__Contribution of this work:__
 - A set of **macOS** and **iOS** role-based attendance checking usable and deployable applications for Apple platforms.
 - Assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning.
 - Custom **admin module** to modify the behavior of **Firebase Authentication**, allows an end-user to create accounts for other end-users.
