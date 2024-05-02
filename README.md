@@ -59,7 +59,7 @@ __Contribution of this work:__
 | 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a *special issue* of [SN Computer Science](https://link.springer.com/journal/42979) journal. |
 | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
-| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted** to the conference [Future Data and Security Engineering](https://link.springer.com/book/10.1007/978-981-19-8069-5). |
+| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted** to the conference [Future Data and Security Engineering (FDSE)](https://link.springer.com/book/10.1007/978-981-19-8069-5). |
 
 ## Applications <a name="applications"></a>
 There are many items in the **AttendanceKit** set of applications, including: **Student**, **Institution**, **Lecturer** (iOS), and **RFID Dashboard** (macOS).
