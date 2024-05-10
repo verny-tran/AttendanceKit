@@ -203,11 +203,12 @@ The accuracy on LFW for the model [facenet.pb](https://github.com/verny-tran/Att
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
 
 ## Authors <a name="authors"></a>
+The main contributors include me and my honorable mentor and supervisor, as the *principal* and *main co-investigator* of the granted projects:
 
-- Me: **Trung-Dung Tran** BSc., vernytran@icloud.com
-- My mentor and supervisor: Dr. **Tu-Nga Ly** Ph.D, ltnga@hcmiu.edu.vn
+- **Trung-Dung Tran** BSc., vernytran@icloud.com
+- Dr. **Tu-Nga Ly** Ph.D, ltnga@hcmiu.edu.vn
 
-### Other honorable collaborators
+#### Other notable collaborators:
 - Assoc. Prof. **Kha-Tu Huynh** Ph.D, hktu@hcmiu.edu.vn
 - **Quang-Phu Nguyen** MSc., nqphu@hcmiu.edu.vn
 - **Cong-Kha Vo** BSc., khavo0704@gmail.com
