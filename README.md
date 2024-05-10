@@ -8,17 +8,17 @@ This is the official repository and **iOS** implementation of the role-based mob
 
 This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-HCM)](https://vnuhcm.edu.vn) under grant number [**C2022-28-10**](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)** and is on-going with another grant in **level B**. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and should not be attributed to their employers or funding sources.
 
-## Table of contents
+## Contents
 1. [Summary](#summary)
 2. [News](#news)
 3. [Applications](#applications)
-4. [Inspiration](#inspiration)
-5. [Compatibility](#compatibility)
-6. [Dependencies](#dependencies)
-7. [Directory structure](#directory)
-8. [Pre-trained models](#models)
-9. [Training data](#training)
-10. [Performance](#performance)
+4. [Compatibility](#compatibility)
+5. [Dependencies](#dependencies)
+6. [Directory structure](#directory)
+7. [Pre-trained models](#models)
+8. [Training data](#training)
+9. [Performance](#performance)
+10. [Authors](#authors)
 11. [Reference](#reference)
 12. [License](#license)
 
@@ -39,7 +39,7 @@ Our system also takes **time and accuracy** into account. In addition, the resul
 
 And also the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) explores the implementation approaches of face recognition models on mobile devices, focusing on their performance and precision. It explores the advantages and disadvantages of the [TensorFlow](https://www.tensorflow.org) and [Core ML](https://developer.apple.com/machine-learning/core-ml) model encoding approach, and its impact on the overall success of the **AttendanceKit** system.
 
-__Contribution of this work__
+__Contribution of this work:__
 - A set of **macOS** and **iOS** role-based attendance checking usable and deployable applications for Apple platforms.
 - Assess the performance of the learning outcomes to illustrate the utility of **automatic RFID, NFC** in improving the quality of learning.
 - Custom **admin module** to modify the behavior of **Firebase Authentication**, allows an end-user to create accounts for other end-users.
@@ -55,11 +55,11 @@ __Contribution of this work__
 | 25.09.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **published**. |
 | 30.07.2023 | A new project titled ["Developing a federated learning algorithm for autonomous attendance systems based on camera and long-range RFID"](https://ord.hcmiu.edu.vn/homepage/view/index) **(level B)** has been **submitted** to request a grant from **Vietnam National University, Ho Chi Minh City (VNU-HCM)**. |
 | 13.07.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **accepted**. |
-| 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted**. |
-| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a **special issue** of [SNCS](https://link.springer.com/journal/42979) journal. |
+| 24.04.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) has been **submitted** to the journal [SNCS](https://link.springer.com/journal/42979). |
+| 03.01.2023 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **selected for publication** in a *special issue* of [SN Computer Science](https://link.springer.com/journal/42979) journal. |
 | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **published**. |
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
-| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted**. |
+| 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted** to the conference [Future Data and Security Engineering (FDSE)](https://link.springer.com/book/10.1007/978-981-19-8069-5). |
 
 ## Applications <a name="applications"></a>
 There are many items in the **AttendanceKit** set of applications, including: **Student**, **Institution**, **Lecturer** (iOS), and **RFID Dashboard** (macOS).
@@ -69,7 +69,7 @@ There are many items in the **AttendanceKit** set of applications, including: **
 | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) |
 | Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as admin application to compose notifications for mobile devices. |
 
-## Inspiration <a name="inspiration"></a>
+### Inspiration
 The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
@@ -149,7 +149,7 @@ $ gradle --refresh-dependencies clean build
 ```
 
 ## Directory structure <a name="directory"></a>
-__IMPORTANT:__ Download the **FaceNet** TensorFlow model ~`87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the *ML* group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
+__IMPORTANT:__ Download the [FaceNet](https://github.com/davidsandberg/facenet) TensorFlow model `~87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the **ML** group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
 
 The directory should look like this:
 ```shell
@@ -187,20 +187,31 @@ The directory should look like this:
 ## Pre-trained models <a name="models"></a>
 | Model name      | LFW accuracy | Training dataset | Architecture |
 |-----------------|--------------|------------------|-------------|
-| [facenet.mlmodel](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.mlmodel) | 0.9945        | VGGFace2    | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
-| [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) | 0.9965        | VGGFace2      | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
-| [facenet.h5](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.h5) | 0.9905        | CASIA-WebFace      | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.mlmodel](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.mlmodel) | `0.9945` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) | `0.9965` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| [facenet.h5](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.h5) | `0.9905` | CASIA-WebFace | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
 
 __NOTE:__ If you use any of the models, please do not forget to give proper credit to me, the [FaceNet](https://github.com/davidsandberg/facenet) authors and those providing the training dataset as well.
 
 ## Training data <a name="training"></a>
-The [CASIA-WebFace](http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html) dataset has been used for training. This training set consists of total of **453.453** images over **10.575** identities after face detection. Some performance improvement has been seen if the dataset has been filtered before training. Some more information about how this was done will come later.
-The best performing model has been trained on the [VGGFace2](https://www.robots.ox.ac.uk/~vgg/data/vgg_face2/) dataset consisting of ~**3.3M** faces and ~**9.000** classes.
+The [CASIA-WebFace](http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html) dataset has been used for training. This training set consists of total of `453.453` images over `10.575` identities after face detection. Some performance improvement has been seen if the dataset has been filtered before training. Some more information about how this was done will come later.
+The best performing model has been trained on the [VGGFace2](https://www.robots.ox.ac.uk/~vgg/data/vgg_face2/) dataset consisting of `~3.3M` faces and `~9.000` classes.
 
 ## Performance <a name="performance"></a>
 The accuracy on LFW for the model [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) is `0.99650±0.00252`. A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw). 
 
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
+
+## Authors <a name="authors"></a>
+The main contributors include me and my honorable mentor and supervisor, as the *principal* and *main co-investigator* of the granted projects:
+
+- **Trung-Dung Tran** BSc., vernytran@icloud.com
+- Dr. **Tu-Nga Ly** Ph.D, ltnga@hcmiu.edu.vn
+
+#### Other notable collaborators:
+- Assoc. Prof. **Kha-Tu Huynh** Ph.D, hktu@hcmiu.edu.vn
+- **Quang-Phu Nguyen** MSc., nqphu@hcmiu.edu.vn
+- **Cong-Kha Vo** BSc., khavo0704@gmail.com
 
 ## Reference <a name="reference"></a>
 To cite the papers, please use these **BibTex**:
