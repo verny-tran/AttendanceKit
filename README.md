@@ -18,8 +18,9 @@ This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-
 7. [Pre-trained models](#models)
 8. [Training data](#training)
 9. [Performance](#performance)
-10. [Reference](#reference)
-11. [License](#license)
+10. [Authors](#authors)
+11. [Reference](#reference)
+12. [License](#license)
 
 ## Summary <a name="summary"></a>
 The research project proposes an ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) system that uses real-time **Ultra-High Frequency (UHF) RFID** and **NFC** technology combined with **face recognition** to automatically check students' attendance in offline classes, packaged as a suite of mobile applications for *Institution*, *Lecturers* and *Students* to overcoming the disadvantages of manual inspection.
@@ -200,6 +201,16 @@ The best performing model has been trained on the [VGGFace2](https://www.robots.
 The accuracy on LFW for the model [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) is `0.99650±0.00252`. A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw). 
 
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
+
+## Authors <a name="authors"></a>
+
+- Me: **Trung-Dung Tran** BSc., vernytran@icloud.com
+- My mentor and supervisor: Dr. **Tu-Nga Ly** Ph.D, ltnga@hcmiu.edu.vn
+
+### Other honorable collaborators
+- Assoc. Prof. **Kha-Tu Huynh** Ph.D, hktu@hcmiu.edu.vn
+- **Quang-Phu Nguyen** MSc., nqphu@hcmiu.edu.vn
+- **Cong-Kha Vo** BSc., khavo0704@gmail.com
 
 ## Reference <a name="reference"></a>
 To cite the papers, please use these **BibTex**:
