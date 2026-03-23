@@ -93,3 +93,6 @@ iOSInjectionProject/
 
 ## TensorFlow specific
 # *.pb
+
+# Firebase / Google credentials — never commit these
+GoogleService-Info.plist
