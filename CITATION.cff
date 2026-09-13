@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+title: AttendanceKit
+abstract: >-
+  Role-based iOS and macOS applications for automatic attendance checking in
+  offline classes, combining real-time Ultra-High Frequency (UHF) RFID, NFC and
+  on-device face recognition.
+type: software
+message: >-
+  If you use this software, please cite the conference paper below. If your work
+  concerns the on-device face recognition models in particular, please cite the
+  journal article as well.
+authors:
+  - family-names: Tran
+    given-names: Trung-Dung
+    email: vernytran@icloud.com
+    affiliation: >-
+      International University, Vietnam National University, Ho Chi Minh City
+  - family-names: Ly
+    given-names: Tu-Nga
+    email: ltnga@hcmiu.edu.vn
+    affiliation: >-
+      International University, Vietnam National University, Ho Chi Minh City
+repository-code: https://github.com/verny-tran/AttendanceKit
+license: CC0-1.0
+keywords:
+  - attendance checking
+  - face recognition
+  - UHF RFID
+  - NFC
+  - on-device machine learning
+  - iOS
+  - macOS
+preferred-citation:
+  type: conference-paper
+  title: >-
+    A set of Role-Based Mobile Applications for Automatic Attendance Checking
+    with UHF RFID Using Realtime Firebase and Face Recognition
+  authors:
+    - family-names: Tran
+      given-names: Trung-Dung
+    - family-names: Huynh
+      given-names: Kha-Tu
+    - family-names: Nguyen
+      given-names: Phu-Quang
+    - family-names: Ly
+      given-names: Tu-Nga
+  collection-title: >-
+    Future Data and Security Engineering. Big Data, Security and Privacy, Smart
+    City and Industry 4.0 Applications (FDSE 2022)
+  collection-type: proceedings
+  publisher:
+    name: Springer
+  start: 432
+  end: 446
+  year: 2022
+  month: 11
+  doi: 10.1007/978-981-19-8069-5_29
+references:
+  - type: article
+    title: >-
+      To Wrap, or Not to Wrap: Examining the Distinctions Between Model
+      Implementations of Face Recognition on Mobile Devices in an Automatic
+      Attendance System
+    authors:
+      - family-names: Tran
+        given-names: Trung-Dung
+      - family-names: Ly
+        given-names: Tu-Nga
+    journal: SN Computer Science
+    volume: 4
+    issue: 6
+    start: 729
+    year: 2023
+    month: 9
+    publisher:
+      name: Springer
+    doi: 10.1007/s42979-023-02185-2

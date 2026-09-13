@@ -1,6 +1,6 @@
 <br />
 <p align="center" width="100%">
-    <img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/AttendanceKit.png"> 
+    <img width="15%" src="https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Icons/AttendanceKit.png"> 
 </p>
 <h1 align="center"> AttendanceKit </h1>
 
@@ -11,31 +11,32 @@ This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-
 ## Contents
 1. [Summary](#summary)
 2. [News](#news)
-3. [Applications](#applications)
-4. [Compatibility](#compatibility)
-5. [Dependencies](#dependencies)
-6. [Directory structure](#directory)
-7. [Pre-trained models](#models)
-8. [Training data](#training)
-9. [Performance](#performance)
-10. [Authors](#authors)
-11. [Reference](#reference)
-12. [License](#license)
+3. [Releases](#releases)
+4. [Applications](#applications)
+5. [Compatibility](#compatibility)
+6. [Dependencies](#dependencies)
+7. [Directory structure](#directory)
+8. [Pre-trained models](#models)
+9. [Training data](#training)
+10. [Performance](#performance)
+11. [Authors](#authors)
+12. [Reference](#reference)
+13. [License](#license)
 
 ## Summary <a name="summary"></a>
 The research project proposes an ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) system that uses real-time **Ultra-High Frequency (UHF) RFID** and **NFC** technology combined with **face recognition** to automatically check students' attendance in offline classes, packaged as a suite of mobile applications for *Institution*, *Lecturers* and *Students* to overcoming the disadvantages of manual inspection.
 
-<img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Attendance%20checking%20flow.png">
+<img align="middle" width="1000" src="https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Figures/Attendance%20checking%20flow.png">
 
 The backend system will send **real-time notifications** to students' mobile devices, allowing them to verify attendance. It also features *attendance monitoring*, allowing instructors to evaluate student status. The system can also **compile reports** on student learning status, providing insights for lecturers, parents, and institutions.
 
-<img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Admin%20module.png">
+<img align="middle" width="1000" src="https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Figures/Admin%20module.png">
 
 The diagram depicted above demonstrates the procedural flow of the **Custom Admin Module**, which addresses [Firebase Authentication](https://firebase.google.com/docs/auth)'s limitation by allowing one **end-user** (*Institution*) to create accounts for **other end-users** (*Student*) using a [Node.js](https://nodejs.org) module of custom functions.
 
 Our system also takes **time and accuracy** into account. In addition, the results present a complete performance study of the system with [RFID](https://en.wikipedia.org/wiki/Radio-frequency_identification), [NFC](https://en.wikipedia.org/wiki/Near-field_communication) and genuine mobile devices, as well as a novel machine learning platform that *can be deployed on actual devices* in reality for commercial. 
 
-<img align="middle" width="1000" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Figures/Face%20recognition%20flow.png">
+<img align="middle" width="1000" src="https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Figures/Face%20recognition%20flow.png">
 
 And also the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) explores the implementation approaches of face recognition models on mobile devices, focusing on their performance and precision. It explores the advantages and disadvantages of the [TensorFlow](https://www.tensorflow.org) and [Core ML](https://developer.apple.com/machine-learning/core-ml) model encoding approach, and its impact on the overall success of the **AttendanceKit** system.
 
@@ -61,12 +62,23 @@ __Contribution of this work:__
 | 04.10.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **accepted**. |
 | 01.08.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) has been **submitted** to the conference [Future Data and Security Engineering (FDSE)](https://link.springer.com/book/10.1007/978-981-19-8069-5). |
 
+## Releases <a name="releases"></a>
+Every release tags the state of this repository behind a peer-reviewed output or an academic milestone. The date given is the date of the milestone itself, not of the commit the tag points at.
+
+| Release | Date | Milestone | Reference |
+|---------|------|-----------|-----------|
+| [`1.0`](https://github.com/verny-tran/AttendanceKit/releases/tag/1.0) | 20.11.2022 | The paper ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) was **published** in [FDSE 2022](https://doi.org/10.1007/978-981-19-8069-5), *Communications in Computer and Information Science*, pp. 432&ndash;446. | [10.1007/978-981-19-8069-5_29](https://doi.org/10.1007/978-981-19-8069-5_29) |
+| [`1.1`](https://github.com/verny-tran/AttendanceKit/releases/tag/1.1) | 25.09.2023 | The article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2) was **published** in [SN Computer Science](https://link.springer.com/journal/42979) **4**, 729. | [10.1007/s42979-023-02185-2](https://doi.org/10.1007/s42979-023-02185-2) |
+| [`1.2`](https://github.com/verny-tran/AttendanceKit/releases/tag/1.2) | 20.03.2024 | The **BSc.** thesis *"Autonomous attendance mobile applications based on Face Recognition and NFC"* was **successfully defended** at the [International University &ndash; VNU-HCM](https://it.hcmiu.edu.vn). | &mdash; |
+
+The work behind `1.0` and `1.1` was funded by [Vietnam National University, Ho Chi Minh City (VNU-HCM)](https://vnuhcm.edu.vn) under grant [**C2022-28-10**](https://ord.hcmiu.edu.vn/homepage/view/content?nid=129) **(level C)**. To cite this repository itself rather than the papers, use the metadata in [`CITATION.cff`](https://github.com/verny-tran/AttendanceKit/blob/main/CITATION.cff); see [Reference](#reference) for the **BibTeX** entries of both papers.
+
 ## Applications <a name="applications"></a>
 There are many items in the **AttendanceKit** set of applications, including: **Student**, **Institution**, **Lecturer** (iOS), and **RFID Dashboard** (macOS).
 
 |     Student    |   Institution  |    Lecturer    | RFID Dashboard |
 |      :---:     |      :---:     |      :---:     |      :---:     |
-| ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Student.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Institution.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/Lecturer.png) | ![](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/RFID%20Dashboard.png) |
+| ![](https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Icons/Student.png) | ![](https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Icons/Institution.png) | ![](https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Icons/Lecturer.png) | ![](https://raw.githubusercontent.com/verny-tran/AttendanceKit/main/Resources/Icons/RFID%20Dashboard.png) |
 | Face recognition is used as biometric security for all students when checking attendance. | To collect student face samples, class scheduling, assign tags, and classrooms. | For lecturers to view attendance reports and change schedules. | For connecting to RFID antennas to read and display tag IDs, act as admin application to compose notifications for mobile devices. |
 
 ### Inspiration
