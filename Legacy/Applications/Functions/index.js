@@ -1,8 +1,9 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-const FieldValue = require('firebase-admin').firestore.FieldValue;
+const functions = require('firebase-functions/v1');
+const { initializeApp } = require('firebase-admin/app');
+const { getAuth } = require('firebase-admin/auth');
+const { getFirestore, FieldValue } = require('firebase-admin/firestore');
 
-admin.initializeApp();
+initializeApp();
 
 class UnauthenticatedError extends Error {
     constructor(message) {
@@ -44,7 +45,7 @@ exports.createUser = functions.https.onCall(async (data, context) => {
 
         //Checking that the user calling the Cloud Function is an Admin user
         const callerUid = context.auth.uid;  //uid of the user calling the Cloud Function
-        const callerUserRecord = await admin.auth().getUser(callerUid);
+        const callerUserRecord = await getAuth().getUser(callerUid);
         if (!callerUserRecord.customClaims.admin) {
             throw new NotAnAdminError('Only Admin users can create new users.');
         }
@@ -63,7 +64,7 @@ exports.createUser = functions.https.onCall(async (data, context) => {
             createdOn: FieldValue.serverTimestamp()
         }
 
-        const userCreationRequestRef = await admin.firestore().collection("userCreationRequests").add(userCreationRequest);
+        const userCreationRequestRef = await getFirestore().collection("userCreationRequests").add(userCreationRequest);
 
 
         const newUser = {
@@ -77,8 +78,7 @@ exports.createUser = functions.https.onCall(async (data, context) => {
             disabled: false
         }
 
-        const userRecord = await admin
-            .auth()
+        const userRecord = await getAuth()
             .createUser(newUser);
 
         const userId = userRecord.uid;
@@ -87,9 +87,9 @@ exports.createUser = functions.https.onCall(async (data, context) => {
         claims[role] = true;
         claims['HCMIU'] = true;
 
-        await admin.auth().setCustomUserClaims(userId, claims);
+        await getAuth().setCustomUserClaims(userId, claims);
 
-        await admin.firestore().collection("users").doc(userId).set(data);
+        await getFirestore().collection("users").doc(userId).set(data);
 
         await userCreationRequestRef.update({ status: 'Treated' });
 
@@ -119,5 +119,5 @@ exports.assignAdminClaim = functions.firestore
         claims['admin'] = true;
         claims['HCMIU'] = true;
 
-        return admin.auth().setCustomUserClaims('74IbKd5oSzaD8NGLq9XbLVq7x4R2', claims);
+        return getAuth().setCustomUserClaims('74IbKd5oSzaD8NGLq9XbLVq7x4R2', claims);
     });
