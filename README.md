@@ -1,6 +1,6 @@
 <br />
 <p align="center" width="100%">
-    <img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Assets/Icons/Cropped/AttendanceKit.png"> 
+    <img width="15%" src="https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Icons/AttendanceKit.png"> 
 </p>
 <h1 align="center"> AttendanceKit </h1>
 
