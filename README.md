@@ -161,7 +161,7 @@ $ gradle --refresh-dependencies clean build
 ```
 
 ## Directory structure <a name="directory"></a>
-__IMPORTANT:__ Download the [FaceNet](https://github.com/davidsandberg/facenet) TensorFlow model `~87.4 MB` from [here](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) and place it into the **ML** group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
+__IMPORTANT:__ The pre-trained weights are **not redistributed with this repository**. Download the [FaceNet](https://github.com/davidsandberg/facenet) TensorFlow checkpoint `20180402-114759` (`~87.4 MB`) from the [pre-trained models](https://github.com/davidsandberg/facenet#pre-trained-models) table of the original repository, export its frozen graph as `facenet.pb`, and place that file into the **ML** group folders of all `.xcodeproj` in the `AttendanceKit.xcworkspace`.
 
 The directory should look like this:
 ```shell
@@ -197,11 +197,13 @@ The directory should look like this:
 ```
 
 ## Pre-trained models <a name="models"></a>
-| Model name      | LFW accuracy | Training dataset | Architecture |
-|-----------------|--------------|------------------|-------------|
-| [facenet.mlmodel](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.mlmodel) | `0.9945` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
-| [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) | `0.9965` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
-| [facenet.h5](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.h5) | `0.9905` | CASIA-WebFace | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| Model file | Upstream checkpoint | LFW accuracy | Training dataset | Architecture |
+|------------|---------------------|--------------|------------------|--------------|
+| `facenet.pb` | [`20180402-114759`](https://github.com/davidsandberg/facenet#pre-trained-models) | `0.9965` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| `facenet.mlmodel` | converted from `facenet.pb` | `0.9945` | VGGFace2 | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+| `facenet.h5` | [`20180408-102900`](https://github.com/davidsandberg/facenet#pre-trained-models) | `0.9905` | CASIA-WebFace | [Inception ResNet v1](https://github.com/davidsandberg/facenet/blob/master/src/models/inception_resnet_v1.py) |
+
+None of these files are hosted here; obtain the upstream checkpoints from the link above. The `.mlmodel` is produced from `facenet.pb`; the trade-offs between wrapping the TensorFlow graph and converting it to **Core ML** are the subject of the article ["**To Wrap, or Not to Wrap: ...**"](https://doi.org/10.1007/s42979-023-02185-2).
 
 __NOTE:__ If you use any of the models, please do not forget to give proper credit to me, the [FaceNet](https://github.com/davidsandberg/facenet) authors and those providing the training dataset as well.
 
@@ -210,7 +212,7 @@ The [CASIA-WebFace](http://www.cbsr.ia.ac.cn/english/CASIA-WebFace-Database.html
 The best performing model has been trained on the [VGGFace2](https://www.robots.ox.ac.uk/~vgg/data/vgg_face2/) dataset consisting of `~3.3M` faces and `~9.000` classes.
 
 ## Performance <a name="performance"></a>
-The accuracy on LFW for the model [facenet.pb](https://github.com/verny-tran/AttendanceKit/blob/main/Resources/Models/facenet.pb) is `0.99650±0.00252`. A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw). 
+The accuracy on LFW for the model [`facenet.pb`](https://github.com/davidsandberg/facenet#pre-trained-models) is `0.99650±0.00252`. A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw). 
 
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
 
