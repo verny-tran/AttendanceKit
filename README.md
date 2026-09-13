@@ -19,9 +19,10 @@ This research was funded by [Vietnam National University, Ho Chi Minh City (VNU-
 8. [Pre-trained models](#models)
 9. [Training data](#training)
 10. [Performance](#performance)
-11. [Authors](#authors)
-12. [Reference](#reference)
-13. [License](#license)
+11. [Security](#security)
+12. [Authors](#authors)
+13. [Reference](#reference)
+14. [License](#license)
 
 ## Summary <a name="summary"></a>
 The research project proposes an ["**AttendanceKit: ...**"](https://doi.org/10.1007/978-981-19-8069-5_29) system that uses real-time **Ultra-High Frequency (UHF) RFID** and **NFC** technology combined with **face recognition** to automatically check students' attendance in offline classes, packaged as a suite of mobile applications for *Institution*, *Lecturers* and *Students* to overcoming the disadvantages of manual inspection.
@@ -85,6 +86,8 @@ There are many items in the **AttendanceKit** set of applications, including: **
 The **face recognition module** of these applications is heavily inspired by the project [**enVision**](https://github.com/IDLabs-Gate/enVision) from [ID Labs](https://github.com/IDLabs-Gate).
 
 ## Compatibility <a name="compatibility"></a>
+[![CI](https://github.com/verny-tran/AttendanceKit/actions/workflows/ci.yml/badge.svg)](https://github.com/verny-tran/AttendanceKit/actions/workflows/ci.yml)
+
 ![iOS](https://img.shields.io/badge/iOS-15.0-blue)
 ![macOS](https://img.shields.io/badge/macOS-12.0-green)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-1.7-red)
@@ -216,6 +219,32 @@ The accuracy on LFW for the model [`facenet.pb`](https://github.com/davidsandber
 
 __NOTE:__ The input images to the model need to be standardized using fixed image standardization (use the option `--use_fixed_image_standardization` when running e.g. `validate_on_lfw.py`).
 
+## Security <a name="security"></a>
+**This repository is the research artefact behind the two papers above. It is not fit for deployment.** The findings below were established by auditing the published code, and are recorded here rather than quietly patched, because the applications as they were evaluated are what the papers describe.
+
+### Authentication happens on the device, against a plaintext table
+The four applications do not use Firebase Authentication at all — the [`Podfile`](https://github.com/verny-tran/AttendanceKit/blob/main/Podfile) pulls `Firebase/Core`, `Firebase/Database` and `Firebase/Storage` and nothing else. Sign-in reads the entire `Passwords` node into the client in [`General/Utilities/Firebase.swift`](https://github.com/verny-tran/AttendanceKit/blob/main/General/Utilities/Firebase.swift#L179) and compares strings in memory in [`Student/View/Login/LoginController.swift`](https://github.com/verny-tran/AttendanceKit/blob/main/Student/View/Login/LoginController.swift#L44):
+
+```swift
+guard self.passwords[username] == password
+else { self.showDialog("Incorrect password."); return }
+```
+
+Three consequences follow. Every credential held by the institution is copied onto every device that reaches the login screen. Credentials are stored unhashed. And the comparison runs under the attacker's control, so it can simply be skipped. **Do not reuse this login path.**
+
+The Cloud Function under [`Legacy/Applications/Functions`](https://github.com/verny-tran/AttendanceKit/blob/main/Legacy/Applications/Functions) already issues genuine Firebase Authentication accounts and custom claims (`admin`, `lecturer`, `student`, `HCMIU`), so the server half of the migration is in place. Moving the clients onto `Firebase/Auth` and deleting the `Passwords` node is the remedy.
+
+### A privilege-escalation trigger has been removed
+Earlier revisions exported `assignAdminClaim`, a trigger that granted the `admin` claim to a hard-coded uid whenever any document appeared under `tempoAssignClaim/{Id}`, performing no authorisation check of its own. Any principal able to write that collection could escalate that account. It was scaffolding from bringing the prototype up, and it has been removed; grant the first claim out of band with the Admin SDK instead.
+
+### The rules are versioned now, and the prototype does not pass them
+[`database.rules.json`](https://github.com/verny-tran/AttendanceKit/blob/main/database.rules.json) and [`storage.rules`](https://github.com/verny-tran/AttendanceKit/blob/main/storage.rules) deny by default and grant access by role. They are the model the system is meant to enforce, not a description of what the evaluated prototype did — without Firebase Authentication the prototype satisfies none of them, and the `Passwords` node is closed outright, which is precisely what breaks its login. Records are keyed by institution codes rather than by authentication uids, so ownership checks such as `auth.uid === $id` cannot yet be expressed; access is granted by role until a mapping exists.
+
+### Smaller notes
+`Constant.storageURL` hard-codes the bucket `gs://facenet-e782e.appspot.com`, which discloses the Firebase project identifier; scope or rotate it before reuse. `GoogleService-Info.plist` is not, and never was, committed. Face embeddings and the samples behind them are biometric data — treat any redeployment as processing special-category personal data.
+
+Found something else? Write to the address in [Authors](#authors).
+
 ## Authors <a name="authors"></a>
 The main contributors include me and my honorable mentor and supervisor, as the *principal* and *main co-investigator* of the granted projects:
 
@@ -254,4 +283,6 @@ To cite the papers, please use these **BibTex**:
 ```
 
 ## License <a name="license"></a>
-**AttendanceKit** is open-sourced under the **CC0-1.0** license. See `LICENSE` for more details.
+**AttendanceKit** is open-sourced under the **MIT** license. See [`LICENSE`](https://github.com/verny-tran/AttendanceKit/blob/main/LICENSE) for the full text.
+
+The repository previously carried a **CC0-1.0** public domain dedication. It was relicensed to **MIT** because Creative Commons [recommends against applying CC licences to software](https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software) — they do not address patent rights or the distinction between source and object code, which a software licence is expected to cover. MIT keeps the work equally free to reuse while making attribution and the warranty disclaimer explicit.

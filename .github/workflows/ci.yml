@@ -1,0 +1,63 @@
+name: CI
+
+# There is deliberately no `xcodebuild` job. The four applications reference
+# `facenet.pb` from their Xcode projects, and that checkpoint is not
+# redistributed here (see the Pre-trained models section of the README), so a
+# full build cannot run on a clean checkout. What can be verified without it is
+# verified: every Swift source parses, and the admin module lints and audits
+# clean.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  swift:
+    name: Swift sources parse
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain
+        run: swift --version
+
+      - name: Parse every Swift source
+        shell: bash
+        run: |
+          total=0
+          failed=0
+          while IFS= read -r file; do
+            total=$((total + 1))
+            if ! swiftc -parse "$file" > /tmp/parse.log 2>&1; then
+              failed=$((failed + 1))
+              echo "::error file=$file::$(head -n 1 /tmp/parse.log)"
+            fi
+          done < <(git ls-files '*.swift')
+          echo "$total Swift files parsed, $failed failed"
+          test "$failed" -eq 0
+
+  functions:
+    name: Admin module
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Legacy/Applications/Functions
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: Legacy/Applications/Functions/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npx eslint index.js
+
+      - name: Audit
+        run: npm audit --audit-level=moderate
