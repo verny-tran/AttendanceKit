@@ -1,0 +1,23 @@
+rules_version = '2';
+
+// Cloud Storage rules for AttendanceKit. The bucket holds the face sample
+// images captured during enrolment. The applications published with the papers
+// reach it only from the legacy prototypes under Legacy/; the current four apps
+// keep embeddings in the Realtime Database instead. Deny by default regardless.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+
+    // Face samples, addressed by subject. Biometric data: readable inside the
+    // institution, writable by the enrolling subject or an administrator.
+    match /faces/{subject}/{sample} {
+      allow read: if request.auth != null
+                  && request.auth.token.HCMIU == true;
+      allow write: if request.auth != null
+                   && (request.auth.token.admin == true
+                       || request.auth.token.student == true);
+    }
+  }
+}

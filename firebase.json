@@ -1,0 +1,12 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "functions": {
+    "source": "Legacy/Applications/Functions",
+    "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+  }
+}

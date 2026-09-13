@@ -120,13 +120,17 @@ exports.createUser = functions.https.onCall(async (data, context) => {
   }
 });
 
-exports.assignAdminClaim = functions.firestore
-    .document("tempoAssignClaim/{Id}")
-    .onCreate((snap, context) => {
-      const claims = {};
-      claims["admin"] = true;
-      claims["HCMIU"] = true;
-
-      return getAuth().setCustomUserClaims(
-          "74IbKd5oSzaD8NGLq9XbLVq7x4R2", claims);
-    });
+// The bootstrap trigger that used to live here (`assignAdminClaim`) granted
+// the `admin` custom claim to a hard-coded uid whenever any document appeared
+// under `tempoAssignClaim/{Id}`. It performed no authorisation check of its
+// own, so any principal able to write that collection could escalate that
+// account. It was scaffolding used while bringing the prototype up, and it
+// has been removed.
+//
+// Grant the first admin claim out of band instead, with the Admin SDK under
+// credentials only the project owner holds:
+//
+//   getAuth().setCustomUserClaims(uid, {admin: true, HCMIU: true});
+//
+// Every later account is created through `createUser` above, which does check
+// that its caller already holds the `admin` claim.

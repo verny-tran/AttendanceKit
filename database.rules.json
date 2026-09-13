@@ -1,0 +1,76 @@
+{
+  // Realtime Database Security Rules for AttendanceKit.
+  //
+  // These rules express the access model the system is meant to enforce. The
+  // iOS prototype published with the FDSE 2022 paper does NOT satisfy them: it
+  // predates Firebase Authentication and signs users in by comparing strings
+  // against the `Passwords` node on the device. See the Security section of the
+  // README. The Cloud Function in Legacy/Applications/Functions already issues
+  // real Firebase Authentication accounts and custom claims, so the server half
+  // of the migration is in place; the clients are what still has to move.
+  //
+  // Claims issued by that function: `admin`, `lecturer`, `student`, `HCMIU`.
+  //
+  // Note on ownership: records are keyed by institution identifiers (student and
+  // lecturer codes), not by Firebase Authentication uids, so per-record owner
+  // checks such as `auth.uid === $id` cannot be expressed until a uid-to-code
+  // mapping exists. Access is therefore granted by role, not by ownership.
+  "rules": {
+    // Deny by default. Every node below has to opt in.
+    ".read": false,
+    ".write": false,
+
+    "Students": {
+      ".read": "auth != null && auth.token.HCMIU === true",
+      "$student": {
+        ".write": "auth != null && auth.token.admin === true"
+      }
+    },
+
+    "Lecturers": {
+      ".read": "auth != null && auth.token.HCMIU === true",
+      "$lecturer": {
+        ".write": "auth != null && auth.token.admin === true"
+      }
+    },
+
+    "Classes": {
+      ".read": "auth != null && auth.token.HCMIU === true",
+      "$class": {
+        ".write": "auth != null && auth.token.admin === true"
+      }
+    },
+
+    // Attendance durations, written by the app that observed the check-in.
+    "Durations": {
+      "$subject": {
+        ".read": "auth != null && auth.token.HCMIU === true",
+        ".write": "auth != null && (auth.token.admin === true || auth.token.lecturer === true || auth.token.student === true)"
+      }
+    },
+
+    // Face embeddings. Biometric data: readable only inside the institution,
+    // writable by the enrolling subject or by an administrator.
+    "All vectors": {
+      "$subject": {
+        ".read": "auth != null && auth.token.HCMIU === true",
+        ".write": "auth != null && (auth.token.admin === true || auth.token.student === true)"
+      }
+    },
+
+    // Cluster centroids derived from the embeddings above.
+    "K-mean Vectors": {
+      ".read": "auth != null && auth.token.HCMIU === true",
+      ".write": "auth != null && auth.token.admin === true"
+    },
+
+    // Closed deliberately. Authentication secrets must never be readable by a
+    // client, and this node should not exist at all once the apps use Firebase
+    // Authentication. Denying it here is what breaks the prototype's login, and
+    // that is the point: the login path is the defect.
+    "Passwords": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
