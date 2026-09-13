@@ -260,12 +260,15 @@ The main contributors include me and my honorable mentor and supervisor, as the 
 To cite the papers, please use these **BibTex**:
 ```bibtex
 @inproceedings{tran2022attendancekit,
-  title={A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID Using Realtime Firebase and Face Recognition},
+  title={AttendanceKit: A set of Role-Based Mobile Applications for Automatic Attendance Checking with UHF RFID Using Realtime Firebase and Face Recognition},
   author={Tran, Trung-Dung and Huynh, Kha-Tu and Nguyen, Phu-Quang and Ly, Tu-Nga},
-  booktitle={International Conference on Future Data and Security Engineering},
+  booktitle={Future Data and Security Engineering. Big Data, Security and Privacy, Smart City and Industry 4.0 Applications (FDSE 2022)},
+  series={Communications in Computer and Information Science},
+  volume={1688},
   pages={432--446},
   year={2022},
-  organization={Springer}
+  publisher={Springer},
+  doi={10.1007/978-981-19-8069-5_29}
 }
 ```
 
@@ -278,7 +281,8 @@ To cite the papers, please use these **BibTex**:
   number={6},
   pages={729},
   year={2023},
-  publisher={Springer}
+  publisher={Springer},
+  doi={10.1007/s42979-023-02185-2}
 }
 ```
 
