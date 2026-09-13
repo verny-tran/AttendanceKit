@@ -21,7 +21,7 @@ authors:
     affiliation: >-
       International University, Vietnam National University, Ho Chi Minh City
 repository-code: https://github.com/verny-tran/AttendanceKit
-license: CC0-1.0
+license: MIT
 keywords:
   - attendance checking
   - face recognition
